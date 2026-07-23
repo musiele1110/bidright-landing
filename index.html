@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>비드라이트 (BID RIGHT) - 공공조달 데이터 분석 파트너</title>
-    <!-- 폰트 로드: 헤드라인용 Pretendard & 본문용 Noto Sans KR -->
+    <title>비드라이트 (BIDRIGHT) - 공공조달 데이터 분석 파트너</title>
+    <!-- 폰트 로드: 전체 폰트를 세련된 Pretendard로 통일 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             /* 파스텔톤 라이트 모드 컬러 팔레트 */
@@ -25,12 +22,8 @@
             --shadow-hover: rgba(37, 99, 235, 0.15);
         }
 
-        /* 전체 기본 폰트는 Noto Sans KR 적용 */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; }
         body { background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; overflow-x: hidden; font-weight: 500; word-break: keep-all; }
-
-        /* 제목/헤드라인만 Pretendard 폰트 유지 */
-        h1, h2, h3, h4, .logo, .kpi-value, .premium-num, .section-title { font-family: 'Pretendard', sans-serif; }
 
         /* Header Navigation */
         header {
@@ -41,21 +34,30 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
         .logo { font-weight: 800; font-size: 1.5rem; color: #1e3a8a; display: flex; align-items: center; gap: 8px; letter-spacing: -0.5px; }
-        .logo-badge { background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); color: white; padding: 4px 8px; border-radius: 6px; font-size: 0.8rem; margin-left: 4px; font-family: 'Pretendard', sans-serif;}
+        .logo-badge { background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); color: white; padding: 4px 8px; border-radius: 6px; font-size: 0.8rem; margin-left: 4px; font-weight: 700; }
+        
         nav { display: flex; gap: 28px; }
         nav a { color: var(--text-sub); text-decoration: none; font-size: 0.95rem; font-weight: 700; transition: color 0.2s; }
         nav a:hover { color: var(--primary); }
         .btn-header { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; box-shadow: 0 4px 12px rgba(37,99,235,0.2); transition: all 0.2s; }
+        .btn-header:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(37,99,235,0.3); }
 
         /* Hero Section */
         .hero { padding: 150px 5% 100px; max-width: 1280px; margin: 0 auto; text-align: center; position: relative; }
         .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--primary-pastel); color: var(--primary); padding: 6px 16px; border-radius: 30px; font-size: 0.9rem; font-weight: 700; margin-bottom: 24px; }
-        .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.3; margin-bottom: 24px; color: #0f172a; letter-spacing: -1px; }
+        
+        /* 💡 수정된 부분: 메인 헤드라인 폰트 크기 및 굵기 대폭 상향 */
+        .hero h1 { font-size: 3.4rem; font-weight: 900; line-height: 1.35; margin-bottom: 24px; color: #0f172a; letter-spacing: -1.5px; }
         .hero h1 span { background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 1.15rem; color: var(--text-sub); max-width: 780px; margin: 0 auto 40px; font-weight: 500; }
+        
         .hero-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
         .btn-primary { background: linear-gradient(135deg, var(--primary), #1e40af); color: white; padding: 16px 36px; border-radius: 10px; font-size: 1.05rem; font-weight: 700; text-decoration: none; box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3); transition: all 0.25s; text-align: center; }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4); }
+        /* 약관 버튼용 2차 디자인 */
+        .btn-secondary { background: white; color: var(--primary); border: 2px solid var(--primary); padding: 14px 36px; border-radius: 10px; font-size: 1.05rem; font-weight: 700; text-decoration: none; transition: all 0.25s; text-align: center; }
+        .btn-secondary:hover { background: var(--primary-pastel); transform: translateY(-3px); }
+
         .focus-areas { display: flex; justify-content: center; gap: 12px; margin-top: 40px; flex-wrap: wrap; }
         .focus-badge { background: white; border: 1px solid var(--border); padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; color: #334155; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
 
@@ -82,7 +84,7 @@
         .feature-icon { width: 56px; height: 56px; background: var(--primary-pastel); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 24px; }
         .feature-card h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; color: #0f172a; }
 
-        /* 💡 수정된 부분: 프리미엄 서비스 2개씩 2열 배치 (2x2 구조) */
+        /* Premium Services 2개씩 2열 배치 (2x2 구조) */
         .premium-grid { 
             display: grid; 
             grid-template-columns: repeat(2, 1fr); 
@@ -111,7 +113,7 @@
         .partner-benefits { display: flex; flex-direction: column; gap: 16px; }
         .benefit-item { background: white; border: 1px solid var(--border); padding: 18px 24px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
         .benefit-title { font-weight: 700; color: #1e293b; font-size: 1rem; }
-        .benefit-badge { background: linear-gradient(135deg, #ef4444, #f97316); color: white; font-weight: 800; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-family: 'Pretendard', sans-serif;}
+        .benefit-badge { background: linear-gradient(135deg, #ef4444, #f97316); color: white; font-weight: 800; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; }
 
         /* CTA */
         .cta-box { background: linear-gradient(135deg, var(--primary), #1e3a8a); border-radius: 24px; padding: 60px 40px; text-align: center; box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25); }
@@ -128,10 +130,10 @@
             nav { display: none; } 
             
             .hero { padding: 110px 5% 60px; }
-            .hero h1 { font-size: 2rem; line-height: 1.35; margin-bottom: 16px; }
+            .hero h1 { font-size: 2.2rem; line-height: 1.35; margin-bottom: 16px; letter-spacing: -1px; }
             .hero p { font-size: 1rem; margin-bottom: 30px; }
             .hero-btns { flex-direction: column; gap: 12px; width: 100%; }
-            .btn-primary { width: 100%; padding: 14px; font-size: 1rem; }
+            .btn-primary, .btn-secondary { width: 100%; padding: 14px; font-size: 1rem; }
             
             .section-container { margin-bottom: 70px; }
             .section-header { margin-bottom: 30px; }
@@ -188,12 +190,15 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-tag">⚡ 공공조달 데이터 분석 전문 솔루션</div>
+        <!-- 💡 수정된 부분: 헤드라인 폰트 사이즈 및 굵기 강조 -->
         <h1>안정적인 성장과 실적 상향을 위한<br><span>과학적 데이터 입찰 파트너</span></h1>
         <p>단순한 운이 아닌 4.5TB 빅데이터와 SQL 알고리즘을 기반으로 최적의 투찰 통계를 도출합니다. 국가 표준 조달 가이드를 준수하며 회원사의 실질적인 수주 성공률을 제고합니다.</p>
         
         <div class="hero-btns">
             <a href="https://open.kakao.com/o/sW9ceCxi" target="_blank" class="btn-primary">카카오톡 실시간 상담하기</a>
             <a href="https://비드라이트.com" target="_blank" class="btn-primary">홈페이지 바로가기</a>
+            <!-- 💡 수정된 부분: 약관 버튼 추가 및 파일 링크 연결 -->
+            <a href="비드라이트_정보제공약관_계약서.pdf" target="_blank" class="btn-secondary">서비스 이용 약관 안내</a>
         </div>
 
         <div class="focus-areas">
@@ -214,7 +219,7 @@
             </div>
             <div class="kpi-card">
                 <div class="kpi-title">평균 낙찰수주율 (26년 6월)</div>
-                <div class="kpi-value">15.3%</div>
+                <div class="kpi-value">12.3%</div>
                 <div class="kpi-desc">전국 10만 건설사 투찰 습관 정밀 분석</div>
             </div>
             <div class="kpi-card">
@@ -255,7 +260,7 @@
         </div>
     </section>
 
-    <!-- Premium Services (2개씩 2열 배치 적용 완료) -->
+    <!-- Premium Services -->
     <section class="section-container" id="premium">
         <div class="section-header">
             <div class="section-subtitle">Total Care Service</div>
